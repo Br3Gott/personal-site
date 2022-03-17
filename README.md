@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Personal-site
+
+One-page personal site created with React and p5.js for a background animation rendered in the browser.
+
+Visit page [here](https://davidsohl.se)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+# Build tools guide
+
 
 ## Available Scripts
 
