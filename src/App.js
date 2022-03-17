@@ -1,14 +1,15 @@
-import TextBlock from './TextBlock';
-import Socials from './Socials';
-import Footer from './Footer';
-import Animation from './Animation';
-
+import React, { Suspense } from 'react';
 import styled from 'styled-components';
+
+import TextBlock from './TextBlock';
+import Footer from './Footer';
+const Socials = React.lazy(() => import('./Socials'));
+const Animation = React.lazy(() => import('./Animation'));
 
 const Background = styled.div`
   height: 100vh;
   width: 100vw;
-  background-color: #222;
+  background-color: #111;
   display: flex;
   justify-content: center;
 `;
@@ -44,11 +45,15 @@ function App() {
       <header className="App-header">
         <Background>
           <CanvasBox>
-            <Animation></Animation>
+            <Suspense fallback={<div className="animation-fallback"></div>}>
+              <Animation></Animation>
+            </Suspense>
           </CanvasBox>
           <Box>
             <TextBlock name="David Sohl"></TextBlock>
-            <Socials>Test</Socials>
+            <Suspense fallback={<p>Loading...</p>}>
+              <Socials></Socials>
+            </Suspense>
             <Footer></Footer>
           </Box>
         </Background>

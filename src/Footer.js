@@ -15,7 +15,7 @@ const OuterBox = styled.div`
 
     margin-bottom: 0.5em;
 
-    @media (max-width: 400px){ 
+    @media (max-width: 500px){ 
         font-size: 2.2vw;
     }
     font-size: 10pt;
@@ -29,7 +29,7 @@ const Box = styled.div`
 
 const Img = styled.img`
     height: 24px;
-    width: 24x;
+    width: 24px;
 `;
 
 const Text = styled.div`
@@ -42,7 +42,7 @@ function Footer(props) {
     <OuterBox>
         <Box>
             <Text title="Icons provided by Icons8">Made with ❤ in Linköping, Sweden using p5.js and React</Text>
-            <Img src="./react.png" alt="React" />
+            <Img src="./react.png" alt="React" height="24" width="24"/>
         </Box>
     </OuterBox>
     )
