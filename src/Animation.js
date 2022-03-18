@@ -8,6 +8,10 @@ function Animation(props) {
 		p5.createCanvas(p5.windowWidth, p5.windowHeight, p5.WEBGL).parent(canvasParentRef);
 	};
 
+    const windowResized = (p5) => {
+        p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+    }
+
 	const draw = (p5) => {
 		p5.background(12);
   
@@ -22,10 +26,10 @@ function Animation(props) {
             }
         }
   
-        p5.camera(0 + p5.sin(p5.frameCount * 0.001) * 300, 300, 300, 0, 0, 0, 0, 1, 0);
+        p5.camera(p5.sin(p5.frameCount * 0.001) * 300, 300, 300, 0, 0, 0, 0, 1, 0);
         };
 
-	return <Sketch setup={setup} draw={draw} />;
+	return <Sketch setup={setup} draw={draw} windowResized={windowResized}/>;
 };
 
 export default Animation
