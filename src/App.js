@@ -45,16 +45,16 @@ function App() {
       <header className="App-header">
         <Background>
           <CanvasBox>
-            <Suspense fallback={<div className="animation-fallback"></div>}>
-              <Animation></Animation>
+            <Suspense fallback={<div className="animation-fallback"/>}>
+              <Animation/>
             </Suspense>
           </CanvasBox>
           <Box>
-            <TextBlock name="David Sohl"></TextBlock>
+            <TextBlock name="David Sohl"/>
             <Suspense fallback={<p>Loading...</p>}>
-              <Socials></Socials>
+              <Socials/>
             </Suspense>
-            <Footer></Footer>
+            <Footer/>
           </Box>
         </Background>
       </header>

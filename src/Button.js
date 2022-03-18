@@ -1,6 +1,6 @@
 function Button(props) {
     return (
-        <input type="text" placeholder={props.placeholder}></input>
+        <input type="text" placeholder={props.placeholder}/>
     )
 }
 

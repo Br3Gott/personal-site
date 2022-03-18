@@ -18,7 +18,7 @@ function TextBlock(props) {
         <Name> 
             {props.name}
         </Name>
-        {"."}<br></br> 
+        {"."}<br/>
         {"Full Stack developer currently studying computer engineering at Linköping University."}
     </Paragraph>
     )
