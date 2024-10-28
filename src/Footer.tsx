@@ -37,7 +37,7 @@ const Text = styled.div`
     padding-right: 0.2em;
 `;
 
-function Footer(props) {
+function Footer() {
     return(
     <OuterBox>
         <Box>
@@ -46,7 +46,6 @@ function Footer(props) {
         </Box>
     </OuterBox>
     )
-    
 }
 
 export default Footer

@@ -18,7 +18,7 @@ const Box = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 300px;
+    max-width: 150px;
     filter: invert(1);
 `;
 
@@ -27,14 +27,13 @@ const Img = styled.img`
     width: 48px;
 `;
 
-function Socials(props) {
+function Socials() {
     return(
     <OuterBox>
         <Text> Check these out 👇</Text>
         <Box>
             <a href="https://github.com/Br3Gott" target="_blank" rel="noreferrer"><Img src="./github.png" alt="GitHub" height="48" width="48" /></a>
             <a href="https://www.linkedin.com/in/davidsohl/" target="_blank" rel="noreferrer"><Img src="./linkedin.png" alt="LinkedIn" height="48" width="48" /></a>
-            <a href="mailto:dawesohl@gmail.com" target="_blank" rel="noreferrer"><Img src="./email.png" alt="Email" height="48" width="48" /></a>
         </Box>
     </OuterBox>
     )
