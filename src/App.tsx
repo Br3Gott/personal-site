@@ -1,10 +1,10 @@
-import React, { Suspense } from 'react';
+import React, { Suspense } from 'react'
 import styled from 'styled-components';
 
-import TextBlock from './TextBlock';
-import Footer from './Footer';
-const Socials = React.lazy(() => import('./Socials'));
 const Animation = React.lazy(() => import('./Animation'));
+import TextBlock from './TextBlock';
+const Socials = React.lazy(() => import('./Socials'));
+import Footer from './Footer'
 
 const Background = styled.div`
   height: 100vh;
@@ -45,21 +45,21 @@ function App() {
       <header className="App-header">
         <Background>
           <CanvasBox>
-            <Suspense fallback={<div className="animation-fallback"/>}>
-              <Animation/>
+            <Suspense fallback={<div className="animation-fallback" />}>
+              <Animation />
             </Suspense>
           </CanvasBox>
           <Box>
-            <TextBlock name="David Sohl"/>
+            <TextBlock name="David Sohl" role="Full Stack developer currently working at Mediaempire." />
             <Suspense fallback={<p>Loading...</p>}>
-              <Socials/>
+              <Socials />
             </Suspense>
-            <Footer/>
+            <Footer />
           </Box>
         </Background>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

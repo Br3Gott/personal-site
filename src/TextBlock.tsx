@@ -11,7 +11,7 @@ const Name = styled.b `
     color: gold;
 `;
 
-function TextBlock(props) {
+function TextBlock(props: { name: string, role: string }) {
     return ( 
     <Paragraph> 
         {"Hi, I am "}
@@ -19,7 +19,7 @@ function TextBlock(props) {
             {props.name}
         </Name>
         {"."}<br/>
-        {"Full Stack developer currently studying computer engineering at Linköping University."}
+        {props.role}
     </Paragraph>
     )
 }
